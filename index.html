@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="static/css/ex3b_style.css"/>
+    <script type="text/javascript" src="static/js/ex3b.js"></script> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-
+    
 
     <title>Jeni Wang - Excercise 3</title>
 </head>
@@ -109,7 +110,7 @@
                     </div>
                 
                     <div class="form-button-wrap">
-                        <button type="submit">Submit</button>
+                        <button type="submit" onclick="formSubmit()">Submit</button>
                     </div>
                 </form>
             </div>
@@ -119,28 +120,3 @@
 
 </body>
 </html>
-
-<script>
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-
-        console.log('------------Your visit--------------')
-
-        for (const [name,value] of data) {
-            console.log(name, ":", value)
-        }
-
-        console.log('Thank you!')
-        console.log('------------------------------------')
-
-        setTimeout(function(){
-            window.location.reload();
-        }, 5000);
-    })
-
-    
-    
-    
-
-</script>
