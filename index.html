@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="static/css/ex3b_style.css"/>
-    <script type="text/javascript" src="static/js/ex3b.js"></script> 
+    <link rel="stylesheet" type="text/css" href="static/css/ex3b_style.css">
+    <script src="static/js/ex3b.js"></script> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,21 +54,22 @@
         
         <div class="main-wrap">
             <p>Please tell us about your visit: </p>
+            <hr>
 
             <div class="main-card">
                 <form id="form" class="form-style">
                     <div class="form-input-wrap">
                         <label>How many in your group?</label>
-                        <input type="number" name="group_number" step="1" min="1" value="1" />
+                        <input type="number" name="group_number" step="1" min="1" value="1">
                     </div>
                     
                     <div class="form-input-wrap">
                         <label>When did you visit?</label>
-                        <input type="date" name="visit_date" />
+                        <input type="date" name="visit_date">
                     </div>
 
-                    <div class="form-radio">
-                        <label>Favorite Place</label>
+                    <fieldset class="form-radio">
+                        <legend>Favorite Place</legend>
                         <div class="form-radio-group">
                             <input type="radio" id="baseball" name="favorite" value="baseball" checked="checked">
                             <label for="baseball">Baseball field</label>
@@ -95,7 +96,7 @@
                             <span></span>
                         </div>                        
                         
-                    </div>
+                    </fieldset>
 
 
                     <div class="form-range">
@@ -103,14 +104,14 @@
                         <div class="form-range-wrap">
                             <label>0</label>
                             <div class="form-range-cust-wrap">
-                                <input type="range" name="rate" min="0" max="10" value="5" />
+                                <input type="range" name="rate" min="0" max="10" value="5">
                             </div>
                             <label>10</label>
                         </div>
                     </div>
                 
                     <div class="form-button-wrap">
-                        <button type="submit" onclick="formSubmit()">Submit</button>
+                        <input type="submit" onclick="formSubmit()">
                     </div>
                 </form>
             </div>

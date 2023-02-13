@@ -17,6 +17,6 @@ function formSubmit(){
     
         setTimeout(function(){
             window.location.reload();
-        }, 5000);
+        }, 1000);
     })
 }

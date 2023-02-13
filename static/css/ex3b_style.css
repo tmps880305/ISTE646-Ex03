@@ -11,13 +11,30 @@ p {
     font-size: 48px;
 }
 
+hr {
+    width: 50%;
+    background-color: grey;
+    margin: 20px
+}
 
 label {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
 }
 
-button {
+fieldset {
+    width: 60%;
+    border: 0.2px solid #ccc;
+    border-radius: 8px;
+}
+
+legend {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    color: grey;
+}
+
+input[type=submit] {
     font-family: 'Abhaya Libre', serif;
     color: #f6f6f6;
     font-size: 16px;
@@ -137,7 +154,6 @@ button:hover {
 .main-background {
     margin: 0;
     padding: 20px;
-    /* height: fit-content; */
     display: flex;
     justify-content: center;
     background-color: #52a6a9;
@@ -153,7 +169,7 @@ button:hover {
 }
 
 .main-wrap p {
-    margin: 20px;
+    margin: 20px 0 0 0;
 }
 
 .main-container {
