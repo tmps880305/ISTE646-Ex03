@@ -1,0 +1,426 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+p {
+    font-family: 'Abhaya Libre', serif;
+    color: #f6f6f6;
+    font-size: 48px;
+}
+
+
+label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+button {
+    font-family: 'Abhaya Libre', serif;
+    color: #f6f6f6;
+    font-size: 16px;
+    background-color: #487f78;
+    border: 1px solid #487f78;
+    margin: 12px 0 12px 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #52a6a9;
+    border-color: #52a6a9;
+}
+
+
+/* CSS for navbar */
+/* Largest wrapper */
+.nav-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9e6e0;
+}
+
+/* Navbar container - to limit navbar 80% width */
+.navbar {
+    width: 83%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+/* CSS for logo img */
+.logo {
+    height: 80px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {    
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 23px;
+    padding-bottom: 20px;
+    height: 100%;
+
+}
+
+.navbar a {
+    color: #487f78;
+    font-family: 'Abhaya Libre', serif;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.navbar li:hover {
+    background-color: #487f78;
+}
+
+.navbar li:hover a {
+    color: #f6f6f6;
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    .navbar {
+        width: 100vw;
+        height: auto;
+    }
+
+    .navbar img {
+        margin: 1.2vh;
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* End of CSS for navbar */
+
+
+/* CSS for main page */
+.main-background {
+    margin: 0;
+    padding: 0;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    background-color: #52a6a9;
+}
+
+.main-wrap {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-wrap p {
+    margin: 20px 0 20px 0;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* CSS for form */
+
+/* General */
+.main-card {
+    margin-top: 10px;
+    padding: 20px 40px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 16px;
+    display: flex;
+    background-color: #f6f6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 30rem;
+
+}
+
+.form-style {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form-style input, label {
+    display: block;
+}
+
+.form-style label {
+    margin-bottom: 0.5rem;
+    color: grey;
+}
+
+
+/* CSS for form number input, select box */
+.form-input-wrap {
+    margin: 12px 0 12px 0;
+}
+
+input[type=number], input[type=date] {
+    color: grey;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+
+input[type=number]:focus, input[type=date]:focus {
+    color: black;
+    outline: none;
+    border-color: #487f78;
+    background-color: #e9e6e0;
+}
+/* End of CSS for form number input, select box */
+
+/* CSS for form input radio */
+.form-radio {
+    margin: 12px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide default bullet */
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-radio-group {
+    margin: 10px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: baseline;
+}
+
+/* Create custom bullet */
+.form-radio-group span {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    background-color: #e9e6e0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Create the dot inside custom bullet */
+.form-radio-group span::after{
+    content: "";
+    display: none;
+    position: relative;
+}
+
+.form-radio-group input:checked ~ span {
+  background-color: #487f78;
+}
+
+.form-radio-group input:checked ~ span::after {
+    top: 4px;
+	left: 4px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+
+.form-radio-group input:hover ~ span {
+    background-color: grey;
+}
+/* End of CSS for form input radio */
+
+
+/* CSS for form input range */
+.form-range {
+    margin: 12px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-range-wrap {
+    width: 90%;
+    margin: 20px 0 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    column-gap: 20px;
+}
+
+.form-range-cust-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+/* Hide default input range, reference to 'https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/' */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+
+
+/* Create custom style for the thumb */
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid grey;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    border: 1px solid grey;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+
+/* Create custom style for the track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #487f78;
+    border-radius: 8px;
+    border: 0.2px solid #e9e6e0;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #487f78;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #487f78;
+    border-radius: 8px;
+    border: 0.2px solid #e9e6e0;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #487f78;
+    border: 0.2px solid #e9e6e0;
+    border-radius: 8px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #487f78;
+}
+input[type=range]::-ms-fill-upper {
+    background: #487f78;
+    border: 0.2px solid #e9e6e0;
+    border-radius: 8px;
+}
+input[type=range]:focus::-ms-fill-upper {
+     background: #487f78;
+}
+/* End of CSS for form input range */
+
+
+/* CSS for form button */
+.form-button-wrap {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+/* End of CSS for form button */
+
+
